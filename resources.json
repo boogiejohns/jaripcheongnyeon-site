@@ -1,0 +1,98 @@
+[
+  {
+    "id": "mohw2023",
+    "title": "2023 자립지원 실태조사 (보건복지부)",
+    "summary": "취업 52.4%·실업 15.8%(일반청년의 약 3배)·월소득 165만 원/생활비 108만 원. 자립수당 월 50만 원, 보호종료 후 5년간 지급.",
+    "tags": ["한국 통계·정책"],
+    "link": "http://www.mohw.go.kr/board.es?mid=a10503000000&bid=0027&list_no=1482061&act=view",
+    "connection": "우리 주장의 한국 공식 통계 출발점."
+  },
+  {
+    "id": "nauru",
+    "title": "나우루 — 불로소득이 노동을 멈추고, 끊기자 무너진 섬",
+    "summary": "인광석 수익으로 세계 2위 부국이었으나, 많은 국민이 일하지 않게 되고 미래 대비 신탁(1991년 13억→2004년 3억 호주달러)도 까먹어, 자원 고갈 후 실업률 90%로 붕괴.",
+    "tags": ["무상지원·자원저주"],
+    "link": "https://en.wikipedia.org/wiki/Economy_of_Nauru",
+    "connection": "보호종료 후 5년 '잦은 현금→빈 시간→절벽'의 국가 단위 확대판."
+  },
+  {
+    "id": "deadaid",
+    "title": "『Dead Aid』(담비사 모요) · 응고지 오콘조-이웰라",
+    "summary": "원조=정부로의 체계적 현금이전이 의존·부패·경제적 나태를 키운다는 주장. 응고지는 'aid가 아니라 trade·기회'를 일관되게 말함.",
+    "tags": ["무상지원·자원저주"],
+    "link": "https://www.ted.com/talks/ngozi_okonjo_iweala_aid_versus_trade/transcript",
+    "connection": "무조건·반복 현금이 의존을 키운다는 학술적 원전. 단 '주지 말자'가 아니라 '기회로 전환하자'."
+  },
+  {
+    "id": "tshirt",
+    "title": "티셔츠의 기적 — 좋은 의도만으로는 충분하지 않다",
+    "summary": "2010 월드컵 응원 티셔츠 25만 장 무상기부가 현지 수요·자생력을 무시했다는 비판. 한 줄 글→트위터 토론→ODA Watch 탐사보도로 공론화.",
+    "tags": ["무상지원·자원저주", "공론화 성공사례"],
+    "link": "https://www.odawatch.net",
+    "connection": "무상지원의 무용 + '한 줄→토론→보도'로 굴러간 공론화 전개 모델."
+  },
+  {
+    "id": "cherokee",
+    "title": "체로키 카지노 배당 — 절벽 대신 '신탁·시점' 설계",
+    "summary": "아동 몫을 신탁에 묶어 졸업/21세에 지급하자 행동·졸업·취업이 개선. 같은 돈도 언제·어떻게 주느냐로 결과가 갈림.",
+    "tags": ["반례(잘 설계된 현금)"],
+    "link": "https://www.semanticscholar.org/paper/Natural-and-Quasi-Experiments-A-Casino-Benefits-the-Costello/6805c6099004671157a93b33c67317036b0c1ed5",
+    "connection": "우리 솔루션('5년 절벽'을 시점·신탁·점진 종료로 바꾸기)의 직접 모델."
+  },
+  {
+    "id": "benefitcliff",
+    "title": "미국 복지 절벽(benefit cliff)",
+    "summary": "일정 소득을 넘으면 식비·주거·의료 지원이 끊겨 임금이 늘어도 손에 쥐는 돈이 줄어드는 구간.",
+    "tags": ["복지절벽·근로유인"],
+    "link": "https://en.wikipedia.org/wiki/Welfare_trap",
+    "connection": "수급을 함께 받는 청년에겐 '일 시작 시 손해'까지 겹치는 곁가지."
+  },
+  {
+    "id": "banerjee2017",
+    "title": "현금이전은 노동을 줄이지 않는다 (Banerjee et al. 2017)",
+    "summary": "여러 개도국 현금이전 프로그램 메타분석 결과, 수급이 근로시간·노동공급을 유의하게 줄인다는 증거를 찾지 못함.",
+    "tags": ["반례(잘 설계된 현금)", "복지절벽·근로유인"],
+    "link": "https://academic.oup.com/wbro/article/32/2/155/4098285",
+    "connection": "'현금=나태'를 단정하지 말라는 핵심 반례. 우리도 인과를 단정하지 않는다."
+  },
+  {
+    "id": "givedirectly",
+    "title": "GiveDirectly · 알래스카 영구기금 배당(PFD)",
+    "summary": "조건 없는 직접 현금이 빈곤 완화에 효과적이며, 알래스카 배당도 전일제 고용을 줄이지 않았다는 연구.",
+    "tags": ["반례(잘 설계된 현금)"],
+    "link": "https://www.givedirectly.org/research-on-cash-transfers/",
+    "connection": "설계만 좋으면 현금은 의존이 아니라 자립의 발판이 된다."
+  },
+  {
+    "id": "toms",
+    "title": "TOMS 신발 기부 RCT (엘살바도르)",
+    "summary": "'한 켤레 사면 한 켤레 기부' 모델의 무작위 실험. 아이들에게 해는 없었으나 자생적 효과도 미미, 일부 의존 신호.",
+    "tags": ["무상지원·자원저주"],
+    "link": "https://www.brookings.edu/articles/the-impact-of-toms-shoes/",
+    "connection": "선의의 무상지원이 자생력을 키우지 못할 수 있음을 보여주는 실험적 근거."
+  },
+  {
+    "id": "snow",
+    "title": "존 스노 — 콜레라 펌프 손잡이를 떼다",
+    "summary": "1854년 런던, 데이터로 오염된 우물을 특정해 펌프 손잡이를 제거하며 역학과 공론화의 출발점을 만듦.",
+    "tags": ["공론화 성공사례"],
+    "link": "https://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak",
+    "connection": "근거(데이터)로 구조의 문제를 짚어 행동을 바꾼 공론화의 원형."
+  },
+  {
+    "id": "dogani",
+    "title": "도가니 → 도가니법",
+    "summary": "소설·영화가 촉발한 공분이 실제 법 개정(성폭력 처벌 강화)으로 이어진 사례.",
+    "tags": ["공론화 성공사례"],
+    "link": "https://ko.wikipedia.org/wiki/%EB%8F%84%EA%B0%80%EB%8B%88_%EC%82%AC%EA%B1%B4",
+    "connection": "이야기→공분→제도 변화의 한국형 공론화 경로."
+  },
+  {
+    "id": "talsisol",
+    "title": "탈시설 운동 · 장혜영 「어른이 되면」",
+    "summary": "시설 중심 보호의 폐쇄성을 당사자의 목소리로 공론화해 탈시설 정책 논의를 끌어올린 사례.",
+    "tags": ["공론화 성공사례", "폐쇄성·연결"],
+    "link": "https://ko.wikipedia.org/wiki/%ED%83%88%EC%8B%9C%EC%84%A4",
+    "connection": "보호의 '폐쇄성'을 외부 연결로 바꾸자는 우리 문제의식과 직접 맞닿음."
+  }
+]
