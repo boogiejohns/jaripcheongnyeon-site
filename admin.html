@@ -12,7 +12,11 @@
 <body class="page">
   <header class="site-nav">
     <a class="site-nav__home" href="index.html">독이 된 5년</a>
-    <nav><a href="gigo.html">기고문</a></nav>
+    <nav>
+      <a href="index.html#archive">자료</a>
+      <a href="gigo.html">기고문</a>
+      <a href="interviews.html">인터뷰 정리</a>
+    </nav>
   </header>
 
   <main class="page-main">
@@ -44,10 +48,14 @@
           <button id="logout-btn" class="btn btn--sm">로그아웃</button>
         </header>
 
-        <h2 class="admin-section-title">기고문 작성</h2>
+        <h2 class="admin-section-title">글 작성</h2>
         <form id="article-form" class="admin-form">
+          <select name="kind" class="admin-select" aria-label="글 종류">
+            <option value="article">기고문</option>
+            <option value="interview">인터뷰 정리</option>
+          </select>
           <input name="title" placeholder="제목" required />
-          <input name="author" placeholder="기고자 이름 (비우면 '익명')" />
+          <input name="author" placeholder="기고자/인터뷰이 이름 (비우면 '익명')" />
           <textarea name="body" rows="12" placeholder="본문. 빈 줄로 문단 구분, **굵게** 가능." required></textarea>
           <label class="admin-check"><input type="checkbox" name="published" checked /> 발행(공개)</label>
           <div class="comment-form__foot">

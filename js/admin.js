@@ -45,6 +45,7 @@ let editingId = null;
 articleForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const payload = {
+    kind: articleForm.kind.value === 'interview' ? 'interview' : 'article',
     title: articleForm.title.value.trim(),
     author: articleForm.author.value.trim() || '익명',
     body: articleForm.body.value.trim(),
@@ -89,6 +90,7 @@ async function loadArticles() {
           (a) => `
         <li class="admin-row">
           <div>
+            <span class="badge">${a.kind === 'interview' ? '인터뷰' : '기고문'}</span>
             <strong>${esc(a.title)}</strong>
             ${a.published ? '' : '<span class="badge">비공개</span>'}
             <span class="admin-row__meta">${esc(a.author)} · ${fmtDate(a.created_at)}</span>
@@ -115,6 +117,7 @@ async function loadArticles() {
       const { data } = await supabase.from('articles').select('*').eq('id', b.dataset.edit).single();
       if (!data) return;
       editingId = data.id;
+      articleForm.kind.value = data.kind === 'interview' ? 'interview' : 'article';
       articleForm.title.value = data.title;
       articleForm.author.value = data.author || '';
       articleForm.body.value = data.body;

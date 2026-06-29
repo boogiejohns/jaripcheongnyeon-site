@@ -1,9 +1,13 @@
-// 기고문 목록 / 개별 기고문 보기 (+ 댓글)
+// 기고문/인터뷰 목록 · 개별 글 보기 (+ 댓글). 페이지의 data-kind로 종류 구분.
 import { supabase, esc, fmtDate, renderBody } from './db.js';
 import { initComments } from './comments.js';
 
 const listView = document.getElementById('article-list');
 const singleView = document.getElementById('article-single');
+
+const KIND = listView.dataset.kind === 'interview' ? 'interview' : 'article';
+const LABEL = KIND === 'interview' ? '인터뷰' : '기고문';
+const BACK = KIND === 'interview' ? 'interviews.html' : 'gigo.html';
 
 const excerpt = (body, n = 120) => {
   const t = body.replace(/\*\*/g, '').replace(/\s+/g, ' ').trim();
@@ -18,15 +22,16 @@ async function showList() {
     .from('articles')
     .select('id, title, author, body, created_at')
     .eq('published', true)
+    .eq('kind', KIND)
     .order('created_at', { ascending: false });
 
   if (error) {
-    listView.innerHTML = `<p class="archive__empty">기고문을 불러오지 못했습니다.</p>`;
+    listView.innerHTML = `<p class="archive__empty">${LABEL}을(를) 불러오지 못했습니다.</p>`;
     console.error('[articles] list', error);
     return;
   }
   if (!data.length) {
-    listView.innerHTML = `<p class="archive__empty">아직 등록된 기고문이 없습니다. 첫 글을 준비 중입니다.</p>`;
+    listView.innerHTML = `<p class="archive__empty">아직 등록된 ${LABEL}이(가) 없습니다. 곧 채워집니다.</p>`;
     return;
   }
   listView.innerHTML = data
@@ -55,13 +60,13 @@ async function showSingle(id) {
     .single();
 
   if (error || !data) {
-    singleView.innerHTML = `<p class="archive__empty">기고문을 찾을 수 없습니다. <a href="gigo.html">목록으로</a></p>`;
+    singleView.innerHTML = `<p class="archive__empty">글을 찾을 수 없습니다. <a href="${BACK}">목록으로</a></p>`;
     return;
   }
 
   document.title = `${data.title} — 자립준비청년 공론화`;
   singleView.innerHTML = `
-    <a class="back-link" href="gigo.html">← 기고문 목록</a>
+    <a class="back-link" href="${BACK}">← ${LABEL} 목록</a>
     <article class="art-full">
       <h1>${esc(data.title)}</h1>
       <p class="art-full__meta">${esc(data.author || '익명')} · ${fmtDate(data.created_at)}</p>

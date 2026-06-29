@@ -18,7 +18,7 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 68px; }
 
 body {
   margin: 0;
@@ -479,9 +479,22 @@ h3 { font-weight: 700; }
   border-bottom: 1px solid var(--line);
 }
 .site-nav__home { font-weight: 800; text-decoration: none; letter-spacing: -0.01em; }
-.site-nav nav { display: flex; gap: 18px; }
-.site-nav nav a { color: var(--fg-dim); text-decoration: none; font-size: 0.95rem; }
+.site-nav nav { display: flex; gap: 20px; flex-wrap: wrap; }
+.site-nav nav a { color: var(--fg-dim); text-decoration: none; font-size: 0.95rem; white-space: nowrap; }
 .site-nav nav a:hover, .site-nav nav a[aria-current="page"] { color: var(--accent); }
+
+.admin-select {
+  width: 100%; padding: 13px 16px; border-radius: 10px;
+  border: 1px solid var(--line); background: var(--bg-card); color: var(--fg);
+  font-size: 1rem; font-family: inherit;
+}
+
+@media (max-width: 560px) {
+  .site-nav { flex-direction: column; align-items: flex-start; gap: 10px; padding: 12px clamp(20px, 5vw, 48px); }
+  .site-nav nav { gap: 14px; }
+  .site-nav nav a { font-size: 0.9rem; }
+  html { scroll-padding-top: 110px; }
+}
 
 .page { min-height: 100vh; display: flex; flex-direction: column; }
 .page-main { flex: 1; padding: clamp(48px, 9vh, 96px) 0; }
