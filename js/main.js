@@ -1,5 +1,5 @@
 /* ============================================================
-   독이 된 5년 — 자립준비청년 공론화
+   자립, 다시 설계하다 — 자립준비청년 공론화
    vanilla JS: reveal-on-scroll, count-up, cliff chart draw,
    archive render + tag/search filter, progress bar, share.
    ============================================================ */
