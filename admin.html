@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>관리자 — 자립준비청년 공론화</title>
+  <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page">
+  <header class="site-nav">
+    <a class="site-nav__home" href="index.html">독이 된 5년</a>
+    <nav><a href="gigo.html">기고문</a></nav>
+  </header>
+
+  <main class="page-main">
+    <div class="wrap admin-wrap">
+
+      <!-- 로그인 -->
+      <section id="login-view">
+        <header class="page-head">
+          <p class="kicker">관리자</p>
+          <h1>로그인</h1>
+          <p class="lead">기고문 발행과 댓글 관리는 관리자만 가능합니다.</p>
+        </header>
+        <form id="login-form" class="admin-form">
+          <input name="email" type="email" placeholder="관리자 이메일" required autocomplete="username" />
+          <input name="password" type="password" placeholder="비밀번호" required autocomplete="current-password" />
+          <button type="submit" class="btn btn--primary">로그인</button>
+          <p id="login-status" class="comment-status" role="status"></p>
+        </form>
+      </section>
+
+      <!-- 관리자 대시보드 -->
+      <section id="admin-view" hidden>
+        <header class="page-head admin-head">
+          <div>
+            <p class="kicker">관리자 대시보드</p>
+            <h1>기고문 · 댓글 관리</h1>
+            <p class="lead">로그인: <span id="whoami"></span></p>
+          </div>
+          <button id="logout-btn" class="btn btn--sm">로그아웃</button>
+        </header>
+
+        <h2 class="admin-section-title">기고문 작성</h2>
+        <form id="article-form" class="admin-form">
+          <input name="title" placeholder="제목" required />
+          <input name="author" placeholder="기고자 이름 (비우면 '익명')" />
+          <textarea name="body" rows="12" placeholder="본문. 빈 줄로 문단 구분, **굵게** 가능." required></textarea>
+          <label class="admin-check"><input type="checkbox" name="published" checked /> 발행(공개)</label>
+          <div class="comment-form__foot">
+            <span id="article-status" class="comment-status" role="status"></span>
+            <span>
+              <button type="button" id="article-cancel" class="btn btn--sm">취소</button>
+              <button type="submit" id="article-submit" class="btn btn--primary">발행</button>
+            </span>
+          </div>
+        </form>
+
+        <h2 class="admin-section-title">기고문 목록</h2>
+        <ul id="admin-article-list" class="admin-list"></ul>
+
+        <h2 class="admin-section-title">댓글 관리 (최근 200개)</h2>
+        <ul id="admin-comment-list" class="admin-list"></ul>
+      </section>
+
+    </div>
+  </main>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

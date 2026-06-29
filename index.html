@@ -281,7 +281,8 @@
         <h2 class="reveal">지원이 끝나는 날, 시작되는 빈곤을 멈추려면</h2>
         <p class="lead reveal">먼저 근거를 함께 봅시다. 그리고 당신의 이야기를 들려주세요.</p>
         <div class="cta-buttons reveal">
-          <a class="btn btn--primary" href="#archive">자료 전체 보기</a>
+          <a class="btn btn--primary" href="gigo.html">기고문 읽고 의견 남기기</a>
+          <a class="btn" href="#archive">자료 전체 보기</a>
           <a class="btn" href="mailto:seongin0393@gmail.com?subject=자립준비청년%20공론화%20제보">제보·연락하기</a>
           <button class="btn" id="share-btn" type="button">공유하기</button>
         </div>
@@ -309,6 +310,26 @@
     </div>
   </section>
 
+  <!-- ================= 의견 남기기 (홈 스레드) ================= -->
+  <section class="comments-section" id="home-comments-section" aria-label="의견 남기기">
+    <div class="wrap comments" id="home-comments">
+      <h2 class="comments__title">의견 남기기 <span class="comment-count">0</span></h2>
+      <p class="lead">이 이야기에 대한 생각을 자유롭게 남겨주세요. 회원가입 없이 누구나 가능합니다.</p>
+      <form class="comment-form">
+        <div class="comment-form__row">
+          <input name="author" placeholder="이름" maxlength="40" required aria-label="이름" />
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        </div>
+        <textarea name="body" placeholder="생각을 남겨주세요." maxlength="2000" required aria-label="댓글 내용"></textarea>
+        <div class="comment-form__foot">
+          <span class="comment-status" role="status"></span>
+          <button type="submit" class="btn btn--primary">등록</button>
+        </div>
+      </form>
+      <ul class="comment-list"></ul>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="wrap">
       <p><strong>독이 된 5년</strong> — 자립준비청년 공론화 프로젝트</p>
@@ -316,7 +337,11 @@
         화살은 당사자가 아니라 지원의 ‘설계’를 향합니다.
         검증되지 않은 현장 진술은 공식 통계와 구분해 표기합니다.
       </p>
-      <p class="footer__contact"><a href="mailto:seongin0393@gmail.com">제보·문의 →</a></p>
+      <p class="footer__contact">
+        <a href="gigo.html">기고문</a> ·
+        <a href="mailto:seongin0393@gmail.com">제보·문의</a> ·
+        <a href="admin.html">관리자</a>
+      </p>
     </div>
   </footer>
 
@@ -324,5 +349,10 @@
   <div class="progress" id="progress" aria-hidden="true"></div>
 
   <script src="js/main.js" defer></script>
+  <script type="module">
+    import { initComments } from './js/comments.js';
+    const el = document.getElementById('home-comments');
+    if (el) initComments('home', el);
+  </script>
 </body>
 </html>
